@@ -16,7 +16,6 @@ def check_digit(text):
     return number
 
 from random import randint
-from unittest import result
 
 def create_array(size):
     array = []
@@ -36,7 +35,7 @@ def sum_of_odd_index(array):
     for i in range(len(array)):
         if i % 2 != 0:
             sum += array[i]
-            print(f'На нечетных позициях элемент : {array[i]}')
+            print(f'На нечетой позиции {i} элемент : {array[i]}')
     return sum
 
 print(f'Сумма элементов списка, стоящих на нечётных позициях: {sum_of_odd_index(result)}')
