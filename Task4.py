@@ -16,7 +16,7 @@ def check_digit(text):
             number = int(input(f"{text}"))
             check = True
         except ValueError as error:
-            print(f"Пожалуйста, введите ЦЕЛОЕ или ДРОБНОЕ число  - {error}")
+            print(f"Пожалуйста, введите именно ЦЕЛОЕ число  - {error}")
     return number
 
 n = check_digit('Введите любое целое число: ')
