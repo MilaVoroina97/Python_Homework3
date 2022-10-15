@@ -21,7 +21,7 @@ def create_array(size,size2):
     for i in range(size):
         buff = []
         for j in range(size2):
-            value =  randint(1, 100)  #int(input('value'))
+            value = randint(1,100)
             buff.append(value)
         array.append(buff)
     return array
@@ -53,7 +53,7 @@ if (m * n) % 2 == 0:
     matrix = create_array(m,n)
     printMatrix(matrix)
     peremesh(matrix,m,n)
-    print()
+    print('Перемешанный массив: ')
     printMatrix(matrix)
 else:
     print('Введите размерность массива так, чтобы там было четное количество элементов.')
