@@ -34,16 +34,19 @@ def printMatrix (matrix):
       print ()
 
 def peremesh(matrix,size1,size2):
-    temp = 0
-    new_i = 0
-    new_j = 0
-    for i in range(size1):
-        for j in range(size2):
-            new_i = randint(0,size1-2)
-            new_j = randint(0,size2-2)
-            temp = matrix[i][j]
-            matrix[i][j] = matrix[new_i][new_j]
-            matrix[new_i][new_j] = temp
+    sorted_size = 0
+    while sorted_size < size1 * size2 - 1:
+        temp = 0
+        new_i = 0
+        new_j = 0
+        for i in range(size1 - sorted_size):
+            for j in range(size2 - sorted_size):
+                new_i = randint(0,size1 - 2)
+                new_j = randint(0,size2 - 2)
+                temp = matrix[i][j]
+                matrix[i][j] = matrix[new_i][new_j]
+                matrix[new_i][new_j] = temp
+        sorted_size += 1
     return matrix
 
 
